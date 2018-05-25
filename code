@@ -1,0 +1,34 @@
+#Ugly number
+
+def check_ugly(i):
+    ugly = False
+     
+    while i != 1:
+         
+        if i%2 == 0:
+            i = i/2
+        if i%3 == 0:
+            i = i/3
+        if i%5 == 0:
+            i = i/5
+        if i == 1:
+            ugly = True
+            break
+        if i%5 !=0 and i%3 !=0 and i%2 != 0:
+            break
+
+    return(ugly)  
+
+#Loop until get n = n
+main = [1]
+n = 150 #want 10 ugly number
+i = 1
+
+while len(main) != n:
+    
+    if check_ugly(i) == True:
+        main.append(i)
+    
+    i = i + 1
+    
+main[-1]
